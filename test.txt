@@ -1,0 +1,75 @@
+python sqlmap.py -u "http://www.example.com/index.php?id=1" --data="POST_STRING_HERE*" --dbs
+
+nmap
+
+nmap -oN /root/Desktop/fullscan.txt -iL input.txt
+
+nmap example.com
+nmap -Pn -T4 -A -v 
+
+uniscan command
+uniscan -u http://www.example.com/ -qweds
+
+Zone Transfer
+fierce -dns example.com
+
+to find out domains
+
+knockpy emaar.com
+
+wget
+
+wget --user xxx --password xxx --limit-rate=200k --no-clobber --convert-links --random-wait -r -p -E -e robots=off -U mozilla http://www.xxx
+
+Nessus
+sudo /etc/init.d/nessusd start
+https://localhost:8834
+
+Nikto
+nikto -h example.com
+
+metasploit
+grabber
+openvas
+vega
+maltogo
+dnsenum
+dmitri
+ncat
+
+acunetix
+fortify
+httrack
+dirbuster
+netsparker
+
+1. Information Gathering (Whois |Traceroute | ping.eu)
+    1. Service enumeration 
+        1. DNSenum Tool 
+            1. dnsenum -enum google.com
+            2. fierce -dns google.com (Fierce use multiple techniques to find all the IP addresses and hostnames used by a target)
+            3. online scanning tools such as pentest-tools.com
+    2. Determining network ranges 
+        1. dmitry -wnspb google.com -o /root/Desktop/dmitry-result
+        2. netmask -s google.com 
+    3. Identifying active machines 
+        1. nmap -sP 192.168.X.x (using nmap for if host is Up or not)
+        2. nping 192.X.X.X/24  
+        3. nping -tcp -p 445 -data AE56A43D 192.X.X.X
+    4. Finding Open ports 
+        1. nmap p 22 192.168.. -oG /root/Desktop/result.txt
+        2. Zen map
+    5. Operating system fingerprinting 
+        1. nmap -O 192.X.X.x
+    6. service fingerprinting 
+        1. nmap -sV 192.X.x.x
+        2. amap -bq 192.168.X.X 1-500
+    7. Threat assessment with Maltego
+        1. DNS All transformation 
+    8. Mapping the network
+
+Spidering
+
+sqlmap -u http://www.sqldummywebsite.com/cgi-bin/item.cgi?item_id=15 --dbs
+dnsenum --enum hackthissite.org
+sslyze --regular www.example.com
